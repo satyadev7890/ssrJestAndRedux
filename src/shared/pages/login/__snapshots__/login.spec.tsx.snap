@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login snapshot testing create snapshot with theme 1`] = `ShallowWrapper {}`;
