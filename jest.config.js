@@ -16,5 +16,8 @@ module.exports = {
     testPathIgnorePatterns: ["/lib/", "/node_modules/"],
     verbose: true,
     setupFilesAfterEnv: ['<rootDir>/jestSetupTests.js'],
+    transform: {
+      "\\.js$": "<rootDir>/node_modules/babel-jest"
+    }
 
   };
