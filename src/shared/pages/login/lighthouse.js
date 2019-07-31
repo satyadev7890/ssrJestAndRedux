@@ -1,11 +1,10 @@
 /* eslint-disable camelcase */
-import lighthouse from 'lighthouse';
-import chromeLauncher from 'chrome-launcher';
-import fs from 'fs';
-import v from 'lighthouse-logger';
+const lighthouse = require('lighthouse');
+const chromeLauncher = require('chrome-launcher');
+const fs = require('fs');
+const log = require('lighthouse-logger');
 
-
-const launchChromeAndRunLighthouse = (url, options, config = null) => {
+function launchChromeAndRunLighthouse(url, options, config = null) {
     log.setLevel(options.logLevel);
     return chromeLauncher.launch({ chromeFlags: options.chromeFlags }).then((chrome) => {
         const opts = options;
@@ -28,7 +27,7 @@ const launchChromeAndRunLighthouse = (url, options, config = null) => {
     });
 }
 
-const createLighthouseHtmlFile = (url, options, fileName, config = null) => {
+function createLighthouseHtmlFile(url, options, fileName, config = null) {
     log.setLevel(options.logLevel);
     return chromeLauncher.launch({ chromeFlags: options.chromeFlags }).then((chrome) => {
         const opts = options;
