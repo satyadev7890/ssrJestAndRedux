@@ -1,4 +1,5 @@
 /* eslint-disable camelcase */
+import "babel-polyfill";
 const lighthouse = require('lighthouse');
 const chromeLauncher = require('chrome-launcher');
 const fs = require('fs');
