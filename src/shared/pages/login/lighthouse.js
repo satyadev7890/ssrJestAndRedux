@@ -5,7 +5,7 @@ import fs from 'fs';
 import v from 'lighthouse-logger';
 
 
-function launchChromeAndRunLighthouse(url, options, config = null) {
+const launchChromeAndRunLighthouse = (url, options, config = null) => {
     log.setLevel(options.logLevel);
     return chromeLauncher.launch({ chromeFlags: options.chromeFlags }).then((chrome) => {
         const opts = options;
@@ -28,7 +28,7 @@ function launchChromeAndRunLighthouse(url, options, config = null) {
     });
 }
 
-function createLighthouseHtmlFile(url, options, fileName, config = null) {
+const createLighthouseHtmlFile = (url, options, fileName, config = null) => {
     log.setLevel(options.logLevel);
     return chromeLauncher.launch({ chromeFlags: options.chromeFlags }).then((chrome) => {
         const opts = options;
