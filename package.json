@@ -73,8 +73,5 @@
     "redux-thunk": "^2.3.0",
     "serialize-javascript": "^1.7.0",
     "typescript": "^3.4.5"
-  },
-  "transform": {
-    "\\.js$": "<rootDir>/node_modules/babel-jest"
   }
 }
