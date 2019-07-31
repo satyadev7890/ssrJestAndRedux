@@ -11,7 +11,8 @@ function launchChromeAndRunLighthouse(url, options, config = null) {
         opts.port = chrome.port;
         return lighthouse(url, opts, config).then((results) => {
             const res = results.report;
-            fs.writeFile('lightHouseReport5.json', res, (err) => {
+            const name = 'lighthouseReport'+Date.now().toString()+'.json';
+            fs.writeFile(name, res, (err) => {
                 if (err) {
                     return console.log(err);
                 }

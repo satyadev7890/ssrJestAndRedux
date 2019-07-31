@@ -22,7 +22,7 @@ describe(
                     cpuSlowdownMultiplier: 4
                 }
             };
-            const results = await launchChromeAndRunLighthouse('https://www.google.com/', opts);
+            const results = await launchChromeAndRunLighthouse('https://www.voog.com/', opts);
             const obj = JSON.parse(results);
             const metrics = obj.audits.metrics.details.items;
             expect(metrics[0].firstContentfulPaint).toBeLessThan(2000);
