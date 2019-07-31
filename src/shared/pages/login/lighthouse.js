@@ -1,8 +1,9 @@
 /* eslint-disable camelcase */
-const lighthouse = require('lighthouse');
-const chromeLauncher = require('chrome-launcher');
-const fs = require('fs');
-const log = require('lighthouse-logger');
+import lighthouse from 'lighthouse';
+import chromeLauncher from 'chrome-launcher';
+import fs from 'fs';
+import v from 'lighthouse-logger';
+
 
 function launchChromeAndRunLighthouse(url, options, config = null) {
     log.setLevel(options.logLevel);
