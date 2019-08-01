@@ -25,6 +25,12 @@ describe(
             const results = await launchChromeAndRunLighthouse('http://localhost:3000', opts);
             const obj = JSON.parse(results);
             const metrics = obj.audits.metrics.details.items;
+            console.log();
+            let x = '<============= prformance metrics ==============>\n';
+            for (const key in metrics[0]) {
+                x = x + key+ ' => '+ metrics[0][key] + '\n';
+              }
+              console.log(x);
             expect(metrics[0].firstContentfulPaint).toBeLessThan(2000);
             expect(metrics[0].firstMeaningfulPaint).toBeLessThan(1000);
         });

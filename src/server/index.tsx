@@ -35,6 +35,17 @@ app.get('*', (req: any, res: any, next: any) => {
                 <head>
                     <title>SSR with RR</title>
                     <link rel="stylesheet" href="/css/style.css">
+                    <script>
+                    var observer = new PerformanceObserver(function(list) {
+                        var perfEntries = list.getEntries();
+                        for (var i = 0; i < perfEntries.length; i++) {
+                           console.log('zzzzzz', perfEntries[i]);
+                        }
+                    });
+                    
+                    // register observer for paint timing notifications
+                    observer.observe({entryTypes: ["paint", "measure"]});
+                    </script>
                     <script src='/bundle.js' defer></script>
                     <script>window.__INITIAL_DATA__ = ${serialize(data)}</script>
                 </head>
