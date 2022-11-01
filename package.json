@@ -65,7 +65,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.0",
     "isomorphic-fetch": "^2.2.1",
-    "lighthouse": "^5.2.0",
+    "lighthouse": "^9.6.8",
     "lighthouse-logger": "^1.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
